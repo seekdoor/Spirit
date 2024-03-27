@@ -19,8 +19,6 @@ ST_SITE_URL = None
 #: be set to overwrite files. Otherwise, files such
 #: as user avatar changes will waste space. Other uploaded
 #: files/images have a unique path so they are never overwritten.
-#: Changing this value will create a pointless
-#: DB migration in ``Django < 3.1``
 ST_STORAGE = None
 
 #: The task manager to run delayed and periodic tasks
@@ -201,6 +199,12 @@ ST_PREVENT_SOME_FILE_DUPLICATION = False
 #: Use the extended font variation. Includes
 #: Latin, Greek, and Cyrillic charsets
 ST_EXTENDED_FONT = False
+
+#: This enables search on Asian languages,
+#: and across word boundaries. It'll increase the index size.
+#: Changing this setting requires re-building the
+#: search index by running `python manage.py rebuild_index`
+ST_NGRAM_SEARCH = False
 
 # Tests helper
 ST_TESTS_RATELIMIT_NEVER_EXPIRE = False

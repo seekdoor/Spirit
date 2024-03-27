@@ -1,3 +1,17 @@
+0.13.0
+==================
+
+* Support only Python 3.8, 3.9, 3.10, and 3.11
+* Support only Django 3.2, and 4.2
+
+0.12.3
+==================
+
+* Security fix: fixes open redirect vulnerability (issue #307)
+* Added: support for search on Asian languages,
+  set setting `ST_NGRAM_SEARCH = True` and rebuild the index
+  `python manage.py rebuild_index` (issue #304)
+
 0.12.2
 ==================
 
